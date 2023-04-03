@@ -34,12 +34,25 @@ At this stage, you will see if your instance is running and the status check is 
 In my own case, i use Gitbash, Visual Studio Code and MOBAXTERM, you can decide to use PUTTY or any other existing ones.
 And to connect to a remote server, you need to copy the public ip address of the instance you want to ssh into.
 
-As the acronyms already indicate, we shall need a Linus System (The Redhat EC2 Instance has been created as pedicted above). Next is the Apache HTTP Server, Mysql Database Management System and a PHP Programming Lnaguage
+As the acronyms already indicate, we shall need:
+
+```
+
+* Linus System (The Redhat EC2 Instance has been created as pedicted above)
+* Apache HTTP Server
+* Mysql Database Management System 
+* PHP Programming Lnaguage
+
+```
+
 
 ### In this project, I will implement a web solution based on LAMP stack on a Linux server by implementing the steps below:
 
+# step 1  Creation of a Linux Operation System
+* A Linux Operating system with a RedHat AMI has beeen created with the above steps 
 
-# Step 1 — Installing Apache and Updating the Firewall
+
+# Step 2  Installing Apache and Updating the Firewall
 * We need to Install Apache using Ubuntu’s package manager, apt:
 
 
@@ -54,4 +67,34 @@ $ sudo apt install apache2
 ```
  sudo systemctl status apache2
  ```
+
+
+Before we can receive any traffic by our Web Server, we need to open TCP port 80 which is the default port that web browsers use to access web pages on the Internet
+
+To open our port 80, I went back to the instance, clicked on security, clicked on edit inbound rules and I add rules.
+I added port 80 for http and port 443 https and I cliked on save rules
+## Our server is running and we can access it locally and from the Internet (Source 0.0.0.0/0 means ‘from any IP address’).
+ 
+* To verify and check that we can access it locally in our ubuntu shell and from the internet, run:
+
+```
+$ curl http://localhost:80
+or
+$ curl http://127.0.0.1:80
+```
+
+
+**As an output you can see some strangely formatted test, do not worry, we just made sure that our Apache web service responds to ‘curl’ command with some payload.**
+
+Open a web browser of your choice and try to access following url
+
+
+```
+http://<Public-ip-address>:80
+```
+
+*  **Another way to retrieve your Public IP address, other than to check it in AWS Web Console, is to use the following command.**
+
+```
+$ curl -s http://169.254.169.254/latest/meta-data/public-ipv4
 
