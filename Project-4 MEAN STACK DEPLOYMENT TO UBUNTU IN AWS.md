@@ -1,0 +1,1 @@
+In this project, we would build a book register Application that has frontend using Angular Framework and a backend that stores Information on a Database (Mongo DB) and this is running on a Node JS Javascript enviroment
