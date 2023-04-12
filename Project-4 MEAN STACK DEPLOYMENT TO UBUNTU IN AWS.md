@@ -271,3 +271,11 @@ In the public folder, we need to create another file called index.html. This is 
 ```
 vi indec.html
 ```
+We need to cd back into the route directory and run the  node server.js
+```
+cd ..
+```
+Start the server by running this command:
+```
+node server.js
+```
