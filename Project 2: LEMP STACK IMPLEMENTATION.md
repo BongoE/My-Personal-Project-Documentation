@@ -1,4 +1,13 @@
-# LEMP PROJECT
+# LEMP Stack Use - Cases:
+
+* **Web Development**: Building Dynamic websites and Web Applications
+
+* **Content Management Systems 'CMS'**: Ensures fast response time, efficient database operations and a reliable persormance
+
+* **E-Commerce Websites** Dynamic content generation, Database operation for product managemnet, orders and customer information and secure online transaction
+
+* **API Services** : Used in building and deploying API services that require efficient handling of HTTP requests and responses and seamless integration with DB for Data retrieval and storage
+
 ## LEMP STACK IMPLEMENTATION (LEMP STACK)
 
 * I already had an account with aws, i launched an instance 
