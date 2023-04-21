@@ -31,15 +31,26 @@ The command **sudo apt install mysql** This command did not work, so i checked o
 "sudo apt install mysql-server"
 ```
 Side input on mysql. MySQL is a fast, multi-threaded, multi-user, and robust SQL database server. It is intended for mission-critical, heavy-load production systems and mass-deployed software.
+
 Let us enable the service.. service enabled.
+
 REPEAT thesame process for the client server. This time, install mysql client
-First update the insatance with command "sudo apt update -y"
-Followed by the command "Sudo apt install mysql-client"
+
+3. On mysql client Linux Server install MySQL Client software.
+
+First update the insatance with command
+```
+"sudo apt update -y"
+```
+Followed by the command 
+```
+"Sudo apt install mysql-client"
+```
 
 Interesting fact: MySQL is an open-source relational database management system. Its name is a combination of "My", the name of
 co-founder Michael Widenius’s daughter, and "SQL", the abbreviation for Structured Query Language.
 
-3. On mysql client Linux Server install MySQL Client software.
+
 
 4. By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other
 using local IP addresses. Use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by 
